@@ -1,14 +1,14 @@
-// TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-const generateMarkdown = require('./utils/generateMarkdown');
+const fs = require('fs');
 
-// TODO: Create an array of questions for user input
-const promptUser = (projectData) => {
+const generateMarkdown = require('./src/readme-template');
+
+const promptUser = (readmeData) => {
   return inquirer.prompt([
     // first prompt for project name
     {
       type: 'input',
-      name: 'name',
+      name: 'title',
       message: "What is your project's name?(Required)",
       validate: (titleInput) => {
         if (titleInput) {
@@ -50,7 +50,6 @@ const promptUser = (projectData) => {
         'Usage',
         'License',
         'Contributing',
-        'Tests',
         'Questions',
       ],
       when: ({ confirmTableOfContents }) => {
@@ -128,18 +127,31 @@ const promptUser = (projectData) => {
       message: 'Would you a questions section?',
       default: true,
     },
+    {
+      type: 'input',
+      name: 'questions',
+      message: 'What is your question?',
+      when: ({ confirmQuestion }) => {
+        if (confirmQuestion) {
+          return true;
+        } else {
+          return false;
+        }
+      },
+    },
   ]);
 };
 
-promptUser().then((projectData) => {
-  // generateMarkdown(projectData);
+promptUser().then((readmeData) => {
+  const readme = generateMarkdown(readmeData);
+
+  fs.writeFile('./dist/README.md', readme, (err) => {
+    if (err) throw err;
+  });
 });
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
 // TODO: Create a function to initialize app
-function init() {}
+// function init() {}
 
 // Function call to initialize app
-init();
+// init();

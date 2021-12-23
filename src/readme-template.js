@@ -17,11 +17,11 @@ module.exports = (templateData) => {
     # ${description}
 
     # Table of Contents
-    * [${tableOfContents[0]}](#installation-instructions)
-    * [${tableOfContents[1]}](#usage)
-    * [${tableOfContents[2]}](#license)
-    * [${tableOfContents[3]}](#how-to-contribute)
-    * [${tableOfContents[4]}](#questions)
+    * [${tableOfContents[0]}](#-installation-instructions)
+    * [${tableOfContents[1]}](#-usage)
+    * [${tableOfContents[2]}](#-license)
+    * [${tableOfContents[3]}](#-how-to-contribute)
+    * [${tableOfContents[4]}](#-questions)
 
     # Installation Instructions
     ${installation}

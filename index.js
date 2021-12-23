@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const generateMarkdown = require('./src/readme-template');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 const promptUser = (readmeData) => {
   return inquirer.prompt([

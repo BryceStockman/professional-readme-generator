@@ -1,7 +1,7 @@
 
-    # run buddy
+    # taskinator
     
-    # find a trainer
+    # manage your tasks
 
     # Table of Contents
     * [Installation](#-installation-instructions)

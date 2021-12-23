@@ -43,7 +43,7 @@ module.exports = (templateData) => {
     ${usage}
 
     # License
-    ${license}
+    [${license}](https://choosealicense.com/licenses/$license/)
 
     # How to Contribute
     ${contributions}

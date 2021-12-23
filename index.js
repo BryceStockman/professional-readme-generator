@@ -94,7 +94,7 @@ const promptUser = (readmeData) => {
       type: 'list',
       name: 'license',
       message: 'What license would you like for your application?.(Required)',
-      choices: ['Apache', 'BSD', 'MIT', 'GNU GPLv3', 'GPL', 'Proprietary'],
+      choices: ['mit', 'gpl-3.0'],
       validate: (licenseInput) => {
         if (licenseInput) {
           return true;

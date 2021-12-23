@@ -1,7 +1,7 @@
 
-    # taskinator
+    # run buddy
     
-    # manage your tasks
+    # find a trainer
 
     # Table of Contents
     * [Installation](#-installation-instructions)
@@ -17,7 +17,7 @@
     do this
 
     # License
-    Apache
+    [mit](https://choosealicense.com/licenses/$license/)
 
     # How to Contribute
     123

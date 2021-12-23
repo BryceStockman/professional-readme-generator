@@ -4,11 +4,11 @@
     # find a trainer
 
     # Table of Contents
-    * [Installation](#installation-instructions)
-    * [Usage](#usage)
-    * [License](#license)
-    * [Contributing](#how-to-contribute)
-    * [Questions](#questions)
+    * [Installation](#-installation-instructions)
+    * [Usage](#-usage)
+    * [License](#-license)
+    * [Contributing](#-how-to-contribute)
+    * [Questions](#-questions)
 
     # Installation Instructions
     123

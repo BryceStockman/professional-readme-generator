@@ -145,7 +145,7 @@ const promptUser = (readmeData) => {
 promptUser().then((readmeData) => {
   const readme = generateMarkdown(readmeData);
 
-  fs.writeFile('./dist/README.md', readme, (err) => {
+  fs.writeFile('./README.md', readme, (err) => {
     if (err) throw err;
   });
 });

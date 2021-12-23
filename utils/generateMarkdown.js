@@ -24,31 +24,30 @@ module.exports = (templateData) => {
   } = templateData;
 
   // QUESTION: WHY IS THIS NOT RETURNING LINKS IN MY README?
-  return `
-    # ${title}
-    
-    # ${description}
+  return `# ${title}
+   
+# ${description}
 
-    # Table of Contents
-    * [${tableOfContents[0]}](#installation)
-    * [${tableOfContents[1]}](#usage)
-    * [${tableOfContents[2]}](#license)
-    * [${tableOfContents[3]}](#contribute)
-    * [${tableOfContents[4]}](#questions)
+# Table of Contents
+ * [${tableOfContents[0]}](#installation)
+ * [${tableOfContents[1]}](#usage)
+ * [${tableOfContents[2]}](#license)
+ * [${tableOfContents[3]}](#contribute)
+ * [${tableOfContents[4]}](#questions)
 
-    # Installation
-    ${installation}
+# Installation
+${installation}
 
-    # Usage
-    ${usage}
+# Usage
+${usage}
 
-    # License
-    [${license}](https://choosealicense.com/licenses/${license}/)
+# License
+[${license}](https://choosealicense.com/licenses/${license}/)
 
-    # Contribute
-    ${contributions}
+# Contribute
+${contributions}
 
-    # Questions
-    ${questions}
-  `;
+# Questions
+${questions}
+`;
 };

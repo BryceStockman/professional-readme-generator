@@ -4,13 +4,13 @@
     # find a trainer
 
     # Table of Contents
-    * [Installation](#-installation-instructions)
-    * [Usage](#-usage)
-    * [License](#-license)
-    * [Contributing](#-how-to-contribute)
-    * [Questions](#-questions)
+    * [Installation](#installation)
+    * [Usage](#usage)
+    * [License](#license)
+    * [Contributing](#contribute)
+    * [Questions](#questions)
 
-    # Installation Instructions
+    # Installation
     123
 
     # Usage
@@ -19,9 +19,9 @@
     # License
     [mit](https://choosealicense.com/licenses/mit/)
 
-    # How to Contribute
+    # Contribute
     123
 
     # Questions
-    How do I?
+    how do I?
   

@@ -17,11 +17,11 @@
     do this
 
     # License
-    [mit](https://choosealicense.com/licenses/$license/)
+    [mit](https://choosealicense.com/licenses/mit/)
 
     # How to Contribute
     123
 
     # Questions
-    how do I?
+    How do I?
   

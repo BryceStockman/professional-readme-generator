@@ -21,7 +21,7 @@ module.exports = (templateData) => {
     usage,
     license,
     contributions,
-    questions,
+    confirmQuestion,
   } = templateData;
 
   // QUESTION: WHY IS THIS NOT RETURNING LINKS IN MY README?
@@ -58,6 +58,7 @@ ${usage}
     returnString += `
 ## License
 This project is licensed under the ${license} see the URL below for more information.
+
 (https://choosealicense.com/licenses/${license}/)
 `;
   } else {
@@ -73,10 +74,11 @@ ${contributions}
     returnString += '';
   }
 
-  if (questions) {
+  if (confirmQuestion) {
     returnString += `
 ## Questions
 If you would like to ask a question, please see (https://github.com/${github}) and submit an issue.
+
 Or, send me an email @${email}.
 
 Thank you,

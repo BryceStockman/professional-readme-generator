@@ -155,18 +155,6 @@ const promptUser = (readmeData) => {
       message: 'Would you like to add a questions section?',
       default: true,
     },
-    {
-      type: 'input',
-      name: 'questions',
-      message: 'What is your question?',
-      when: ({ confirmQuestion }) => {
-        if (confirmQuestion) {
-          return true;
-        } else {
-          return false;
-        }
-      },
-    },
   ]);
 };
 

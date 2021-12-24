@@ -12,6 +12,8 @@ function tableOfContentsAdded(tableOfContentsArr) {
 module.exports = (templateData) => {
   // QUESTION: WOULD IT MAKE SENSE TO DESTRUCTURE THIS?
   const {
+    github,
+    email,
     title,
     description,
     tableOfContents,
@@ -74,7 +76,10 @@ ${contributions}
   if (questions) {
     returnString += `
 ## Questions
-${questions}
+If you would like to ask a question, please see (https://github.com/${github}) and submit an issue.
+Or, send me an email @${email}.
+
+Thank you,
 `;
   } else {
     returnString += '';

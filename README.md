@@ -1,7 +1,7 @@
-# rua ![github license](https://shields.io/badge/license-compliant-blue.svg)
+# run buddy ![github license](https://shields.io/badge/license-mit-blue.svg)
   
 ## Description
-bah
+find a trainer
 
 ## Table of Contents
 * [Installation](#Installation)
@@ -12,17 +12,20 @@ bah
 
 
 ## Installation
-qewb
+123
 
 ## Usage
-en
+do this
 
 ## License
-This project is licensed under the compliant see the URL below for more information.
-(https://choosealicense.com/licenses/compliant/)
+This project is licensed under the mit see the URL below for more information.
+(https://choosealicense.com/licenses/mit/)
 
 ## Contribute
-saedfn
+123
 
 ## Questions
-aerh
+If you would like to ask a question, please see (https://github.com/BryceStockman) and submit an issue.
+Or, send me an email @bryce.d.stockman@gmail.com.
+
+Thank you,

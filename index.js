@@ -5,7 +5,35 @@ const generateMarkdown = require('./utils/generateMarkdown');
 
 const promptUser = (readmeData) => {
   return inquirer.prompt([
-    // first prompt for project name
+    // first prompt for github username
+    {
+      type: 'input',
+      name: 'github',
+      message: 'What is your github username?(Required)',
+      validate: (githubInput) => {
+        if (githubInput) {
+          return true;
+        } else {
+          console.log('Please enter your github username');
+          return false;
+        }
+      },
+    },
+    // second prompt for email account
+    {
+      type: 'input',
+      name: 'email',
+      message: 'What is your email?(Required)',
+      validate: (emailInput) => {
+        if (emailInput) {
+          return true;
+        } else {
+          console.log('Please enter your email');
+          return false;
+        }
+      },
+    },
+    // third prompt for project name
     {
       type: 'input',
       name: 'title',
@@ -19,7 +47,7 @@ const promptUser = (readmeData) => {
         }
       },
     },
-    // second prompt for project description
+    // fourth prompt for project description
     {
       type: 'input',
       name: 'description',
@@ -33,7 +61,7 @@ const promptUser = (readmeData) => {
         }
       },
     },
-    // third prompt for project table of contents
+    // fifth prompt for project table of contents
     {
       type: 'confirm',
       name: 'confirmTableOfContents',
@@ -60,7 +88,7 @@ const promptUser = (readmeData) => {
         }
       },
     },
-    // fourth prompt for installation instructions
+    // sixth prompt for installation instructions
     {
       type: 'input',
       name: 'installation',
@@ -74,7 +102,7 @@ const promptUser = (readmeData) => {
         }
       },
     },
-    // fifth prompt for usage instructions
+    // seventh prompt for usage instructions
     {
       type: 'input',
       name: 'usage',
@@ -89,7 +117,7 @@ const promptUser = (readmeData) => {
         }
       },
     },
-    // sixth prompt for license options
+    // eighth prompt for license options
     {
       type: 'list',
       name: 'license',
@@ -106,7 +134,7 @@ const promptUser = (readmeData) => {
         }
       },
     },
-    // seventh prompt for contributing instructions
+    // ninth prompt for contributing instructions
     {
       type: 'input',
       name: 'contributions',
@@ -120,7 +148,7 @@ const promptUser = (readmeData) => {
         }
       },
     },
-    // eighth prompt for question submission
+    // tenth prompt for question submission
     {
       type: 'confirm',
       name: 'confirmQuestion',

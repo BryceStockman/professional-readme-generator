@@ -1,14 +1,13 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function tableOfContentsAdded(tableOfContentsArr) {
+  let tableOfContentsEl;
+  let tableOfContents = '';
+  for (let i = 0; i < tableOfContentsArr.length; i++) {
+    tableOfContentsEl = `* [${tableOfContentsArr[i]}](#${tableOfContentsArr[i]})\n`;
+    tableOfContents += tableOfContentsEl;
+  }
+  console.log(tableOfContents);
+  return tableOfContents;
+}
 
 module.exports = (templateData) => {
   // QUESTION: WOULD IT MAKE SENSE TO DESTRUCTURE THIS?
@@ -24,30 +23,61 @@ module.exports = (templateData) => {
   } = templateData;
 
   // QUESTION: WHY IS THIS NOT RETURNING LINKS IN MY README?
-  return `# ${title}
-   
-# ${description}
+  var returnString = '';
 
-# Table of Contents
- * [${tableOfContents[0]}](#installation)
- * [${tableOfContents[1]}](#usage)
- * [${tableOfContents[2]}](#license)
- * [${tableOfContents[3]}](#contribute)
- * [${tableOfContents[4]}](#questions)
+  returnString += `# ${title} ![github license](https://shields.io/badge/license-${license}-blue.svg)
+  
+## Description
+${description}
 
-# Installation
+## Table of Contents
+${tableOfContentsAdded(tableOfContents)}
+`;
+
+  if (installation) {
+    returnString += `
+## Installation
 ${installation}
+`;
+  } else {
+    returnString += '';
+  }
 
-# Usage
+  if (usage) {
+    returnString += `
+## Usage
 ${usage}
+`;
+  } else {
+    returnString += '';
+  }
 
-# License
-[${license}](https://choosealicense.com/licenses/${license}/)
+  if (license) {
+    returnString += `
+## License
+This project is licensed under the ${license} see the URL below for more information.
+(https://choosealicense.com/licenses/${license}/)
+`;
+  } else {
+    returnString += '';
+  }
 
-# Contribute
+  if (contributions) {
+    returnString += `
+## Contribute
 ${contributions}
+`;
+  } else {
+    returnString += '';
+  }
 
-# Questions
+  if (questions) {
+    returnString += `
+## Questions
 ${questions}
 `;
+  } else {
+    returnString += '';
+  }
+  return returnString;
 };

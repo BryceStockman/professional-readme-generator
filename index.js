@@ -94,7 +94,7 @@ const promptUser = (readmeData) => {
       type: 'list',
       name: 'license',
       message: 'What license would you like for your application?(Required)',
-      choices: ['mit', 'gpl-3.0'],
+      choices: ['mit', 'apache', 'lgpl_2_1', 'gpl', 'bsd', 'compliant'],
       validate: (licenseInput) => {
         if (licenseInput) {
           return true;
@@ -124,7 +124,7 @@ const promptUser = (readmeData) => {
     {
       type: 'confirm',
       name: 'confirmQuestion',
-      message: 'Would you a questions section?',
+      message: 'Would you like to add a questions section?',
       default: true,
     },
     {

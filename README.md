@@ -31,3 +31,6 @@ If you would like to ask a question, please see (https://github.com/BryceStockma
 Or, send me an email @bryce.d.stockman@gmail.com.
 
 Thank you,
+
+## Link to Video
+https://watch.screencastify.com/v/Zz86MYmGnCsvJtMZzaAm
